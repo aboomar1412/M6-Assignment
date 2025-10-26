@@ -5,12 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const employee = {
         id: f.empId.value,
         name: f.name.value,
+        extension: f.ext.value,
         email: f.email.value,
-        age: f.age.value,
         department: f.department.value
       };
       console.log("=== New Employee Added ===");
-      for (let key in employee) console.log(`${key}: ${employee[key]}`);
+      for (let key in employee) console.log(`${key.charAt(0).toUpperCase() + key.slice(1)}: ${employee[key]}`);
       f.reset();
     });
   });
